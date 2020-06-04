@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="68b44f66166d4613abf183aff7fddda5" Name="Diagram1" ZoomLevel="73">
+        <EntityTypeShape EntityType="ECommerceModel.Member" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ECommerceModel.Address" Width="1.5" PointX="3.5" PointY="0.5" />
+        <AssociationConnector Association="ECommerceModel.FK_Address_Member" />
+        <EntityTypeShape EntityType="ECommerceModel.Product" Width="1.5" PointX="10" PointY="0.5" />
+        <EntityTypeShape EntityType="ECommerceModel.ProductImage" Width="1.5" PointX="13.125" PointY="0.5" />
+        <AssociationConnector Association="ECommerceModel.FK_ProductImages_Product" />
+        <EntityTypeShape EntityType="ECommerceModel.Order" Width="1.5" PointX="2.625" PointY="4.5" />
+        <EntityTypeShape EntityType="ECommerceModel.OrderItem" Width="1.5" PointX="6.5" PointY="0.875" />
+        <AssociationConnector Association="ECommerceModel.FK_Order_Member" />
+        <AssociationConnector Association="ECommerceModel.FK_OrderItems_Order" />
+        <AssociationConnector Association="ECommerceModel.FK_OrderItems_Product" />
+        <AssociationConnector Association="ECommerceModel.FK_Order_Address" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

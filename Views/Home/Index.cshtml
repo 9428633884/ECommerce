@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ECommerce</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Members", "Index", "Members")</h2>
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Addresses", "Index", "Addresses")</h2>
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Products", "Index", "Products")</h2>
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("ProductImages", "Index", "ProductImages")</h2>
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Orders", "Index", "Orders")</h2>
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("OrderItems", "Index", "OrderItems")</h2>
+    </div>
+</div>
