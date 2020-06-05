@@ -20,26 +20,35 @@
         <th>
             @Html.DisplayNameFor(model => model.Product.ProductName)
         </th>
+        <th>
+            Thumbnail
+        </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Quantity)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Order.Member.UserName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Product.ProductName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.OrderItemID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.OrderItemID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.OrderItemID })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Quantity)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Order.Member.UserName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Product.ProductName)
+    </td>
+    <td>
+        @if (item.Product.ProductImages.Count() > 0)
+        {
+            <img src="@Html.DisplayFor(modelItem => item.Product.ProductImages.First().ImageURL)" style="height:100px;width:100px;" />
+        }
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.OrderItemID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.OrderItemID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.OrderItemID })
+    </td>
+</tr>
 }
 
 </table>
